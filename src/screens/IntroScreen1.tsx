@@ -6,6 +6,7 @@ import CustomInput from "./src/components/CustomInput";
 import { useState } from "react";
 import RootNavigator from "./src/navigation/RootNavigator";
 import CustomButton from "../components/CustomButton";
+
 import React from 'react';
 import {
   View,
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    height: height * 0.4,
+    height: 0.4,
     justifyContent: 'flex-end',
     backgroundColor: 'rgba(45, 67, 121, 0.95)',
   },
