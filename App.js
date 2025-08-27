@@ -1,160 +1,22 @@
-import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  ImageBackground,
-  Dimensions,
-  Image,
-  SafeAreaView,
-  // StatusBar,
-} from 'react-native';
-
-const { width, height } = Dimensions.get('window');
-
-const BudgetOnboardingScreen = () => {
-  const handleSkip = () => {
-    // Handle skip action
-    console.log('Skip pressed');
-  };
-
-  const handleNext = () => {
-    // Handle next action
-    console.log('Next pressed');
-  };
-
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import CustomButton from "./src/components/CustomButton";
+import CustomHeader from "./src/components/CustomHeader";
+import { Colors } from "./src/constants/Theme";
+import CustomInput from "./src/components/CustomInput";
+import { useState } from "react";
+import RootNavigator from "./src/navigation/RootNavigator";
+export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      {/* <StatusBar barStyle={'dark-content'} backgroundColor={"blue"}/> */}
-      <View style={styles.imageContainer}>
-        {/* Replace this View with your actual image */}
-        <View style={styles.placeholderImage}>
-          <Image source={require('../FundFlex-Cohort-2/src/assets/images/woman.png')} style={styles.img}/>
-        </View>
-      </View>
-      
-      <View style={styles.gradientOverlay}>
-        <View style={styles.contentContainer}>
-          <View style={styles.textContainer}>
-            <Text style={styles.title}>
-              Set Your Budget, Spend with Intention
-            </Text>
-            <Text style={styles.subtitle}>
-              Create custom budgets for what matters most and track every naira with ease.
-            </Text>
-          </View>
-          
-          <View style={styles.buttonContainer}>
-            <TouchableOpacity
-              style={styles.skipButton}
-              onPress={handleSkip}
-              activeOpacity={0.7}
-            >
-              <Text style={styles.skipButtonText}>Skip</Text>
-            </TouchableOpacity>
-            
-            <TouchableOpacity
-              style={styles.nextButton}
-              onPress={handleNext}
-              activeOpacity={0.7}
-            >
-              <Text style={styles.nextButtonText}>Next</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </View>
-    </SafeAreaView>
+   <RootNavigator/>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
-  },
-  imageContainer: {
-    flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
-  },
-  // placeholderImage: {
-  //   width: width * 0.8,
-  //   height: height * 0.4,
-  //   backgroundColor: '#e0e0e0',
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   borderRadius: 10,
-  // },
-  img: {
-    width: '100%',
-    height:'80%',
-
-  },
-  gradientOverlay: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: height * 0.4,
-    justifyContent: 'flex-end',
-    backgroundColor: 'rgba(45, 67, 121, 0.95)',
-  },
-  contentContainer: {
-    paddingHorizontal: 24,
-    paddingBottom: 40,
-  },
-  textContainer: {
-    marginBottom: 40,
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: '#ffffff',
-    textAlign: 'center',
-    marginBottom: 16,
-    lineHeight: 34,
-  },
-  subtitle: {
-    fontSize: 16,
-    color: '#ffffff',
-    textAlign: 'center',
-    lineHeight: 24,
-    opacity: 0.9,
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    gap: 16,
-  },
-  skipButton: {
-    flex: 1,
-    paddingVertical: 16,
-    paddingHorizontal: 24,
-    borderRadius: 25,
-    borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.3)',
-    backgroundColor: 'transparent',
-    alignItems: 'center',
-  },
-  skipButtonText: {
-    color: '#ffffff',
-    fontSize: 16,
-    fontWeight: '600',
-  },
-  nextButton: {
-    flex: 1,
-    paddingVertical: 16,
-    paddingHorizontal: 24,
-    borderRadius: 25,
-    backgroundColor: '#4CAF50',
-    alignItems: 'center',
-  },
-  nextButtonText: {
-    color: '#ffffff',
-    fontSize: 16,
-    fontWeight: '600',
+    backgroundColor: "#fff",
+    
+    alignItems: "center",
   },
 });
-
-export default BudgetOnboardingScreen;
