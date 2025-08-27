@@ -7,7 +7,7 @@ const Splash = () => {
     const navigation = useNavigation()
   return (
     <View>
-          <Text>Splash</Text>
+        
           <CustomButton title='Go to Login' onPress={() => navigation.navigate('Login')}/>
     </View>
   )
