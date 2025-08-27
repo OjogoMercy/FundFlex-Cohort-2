@@ -1,10 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { useNavigation } from 'expo-router'
+import CustomButton from '../components/CustomButton'
 
 const Splash = () => {
+    const navigation = useNavigation()
   return (
     <View>
-      <Text>Splash</Text>
+          <Text>Splash</Text>
+          <CustomButton title='Go to Login' onPress={() => navigation.navigate('Login')}/>
     </View>
   )
 }
