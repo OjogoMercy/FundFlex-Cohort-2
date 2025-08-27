@@ -6,9 +6,9 @@ import CustomButton from '../components/CustomButton'
 const Splash = () => {
     const navigation = useNavigation()
   return (
-    <View>
+    <View style={{flex:1,justifyContent:'center'}}>
           <Text>Splash</Text>
-          <CustomButton title='Go to Login' onPress={() => navigation.navigate('Login')}/>
+          <CustomButton title='Go to Login' onPress={() => navigation.navigate('IntroScreen1')}/>
     </View>
   )
 }
