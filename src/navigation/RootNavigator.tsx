@@ -11,8 +11,8 @@ import Settings from "../screens/Bottomtab/Settings";
 import Wallet from "../screens/Bottomtab/Wallet";
 import Profile from "../screens/Profile";
 import Splash from "../screens/Splash";
-import IntroScreen2 from "../screens/IntroScreen2";
 import IntroScreen1 from "../screens/IntroScreen1";
+import IntroScreen2 from "../screens/IntroScreen2";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
