@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import CustomHeader from '../components/CustomHeader'
 
 const IntroScreen1 = () => {
   return (
