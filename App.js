@@ -5,15 +5,10 @@ import CustomHeader from "./src/components/CustomHeader";
 import { Colors } from "./src/constants/Theme";
 import CustomInput from "./src/components/CustomInput";
 import { useState } from "react";
+import RootNavigator from "./src/navigation/RootNavigator";
 export default function App() {
-  const [on, off] = useState('')
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <CustomHeader title="index" />
-      <CustomButton title="buttonComponent" />
-      <CustomInput value={ on} onChangeText={off} />
-    </View>
+   <RootNavigator/>
   );
 }
 
