@@ -19,9 +19,11 @@ const Stack = createNativeStackNavigator();
 
 export default function RootNavigator() {
     return (
+        
       <NavigationIndependentTree>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="Splash" screenOptions={{headerShown: false}}>
+                <Stack.Navigator initialRouteName="Splash" screenOptions={{ headerShown: false }}>
+                    
             <Stack.Screen
               name="BottomTab"
               component={BottomTab}
