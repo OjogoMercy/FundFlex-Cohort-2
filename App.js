@@ -9,6 +9,7 @@ export default function App() {
   const [on, off] = useState('')
   return (
     <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
       <CustomHeader title="index" />
       <CustomButton title="buttonComponent" />
       <CustomInput value={ on} onChangeText={off} />

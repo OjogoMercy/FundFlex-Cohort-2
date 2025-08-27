@@ -5,6 +5,7 @@ import { Colors, FONTS, SCREEN_HEIGHT, SCREEN_WIDTH } from "../constants/Theme";
 // import { useNavigation } from 'expo-router';
 const CustomHeader = ({ title }) => {
   // const navigation = useNavigation();
+  // const navigation = useNavigation();
   return (
     <View
       style={{
