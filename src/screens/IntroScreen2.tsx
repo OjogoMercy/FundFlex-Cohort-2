@@ -18,6 +18,7 @@ import {
 } from "react-native";
 import { Images } from "../constants/Images";
 import { FONTS, Colors } from "../constants/Theme";
+import { useNavigation } from "@react-navigation/native";
 
 export default function IntroScreen2() {
   const handleSkip = () => {
@@ -29,6 +30,7 @@ export default function IntroScreen2() {
     // Handle next action
     console.log("Next pressed");
   };
+  const navigation = useNavigation();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -61,7 +63,10 @@ export default function IntroScreen2() {
             </View>
 
             <View style={{ width: "40%" }}>
-              <CustomButton title="Next" onPress={handleNext} />
+              <CustomButton
+                title="Next"
+                onPress={() => navigation.navigate("Login")}
+              />
             </View>
           </View>
         </View>
