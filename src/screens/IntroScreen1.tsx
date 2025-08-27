@@ -1,11 +1,11 @@
 
 import { StatusBar } from "expo-status-bar";
-import CustomButton from "./src/components/CustomButton";
 import CustomHeader from "./src/components/CustomHeader";
 import { Colors } from "./src/constants/Theme";
 import CustomInput from "./src/components/CustomInput";
 import { useState } from "react";
 import RootNavigator from "./src/navigation/RootNavigator";
+import CustomButton from "../components/CustomButton";
 import React from 'react';
 import {
   View,
@@ -18,6 +18,7 @@ import {
   SafeAreaView,
   // StatusBar,
 } from 'react-native';
+import { Images } from "../constants/Images";
 
 const { width, height } = Dimensions.get('window');
 export default function IntroScreen1() {
@@ -37,7 +38,7 @@ export default function IntroScreen1() {
       <View style={styles.imageContainer}>
         {/* Replace this View with your actual image */}
         <View style={styles.placeholderImage}>
-          <Image source={require('../FundFlex-Cohort-2/src/assets/images/woman.png')} style={styles.img}/>
+          <Image source={Images.avatar2} style={styles.img}/>
         </View>
       </View>
       
@@ -61,13 +62,9 @@ export default function IntroScreen1() {
               <Text style={styles.skipButtonText}>Skip</Text>
             </TouchableOpacity>
             
-            <TouchableOpacity
-              style={styles.nextButton}
-              onPress={handleNext}
-              activeOpacity={0.7}
-            >
-              <Text style={styles.nextButtonText}>Next</Text>
-            </TouchableOpacity>
+                      <View style={{width:'40%'}}>
+                          <CustomButton title='Next' onPress={ handleNext} />
+            </View>
           </View>
         </View>
       </View>
@@ -83,17 +80,8 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
+   
   },
-  // placeholderImage: {
-  //   width: width * 0.8,
-  //   height: height * 0.4,
-  //   backgroundColor: '#e0e0e0',
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   borderRadius: 10,
-  // },
   img: {
     width: '100%',
     height:'80%',
