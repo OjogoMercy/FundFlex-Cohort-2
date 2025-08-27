@@ -1,12 +1,9 @@
-
 import { StatusBar } from "expo-status-bar";
 import CustomHeader from "./src/components/CustomHeader";
-import { Colors } from "./src/constants/Theme";
 import CustomInput from "./src/components/CustomInput";
 import { useState } from "react";
 import RootNavigator from "./src/navigation/RootNavigator";
 import CustomButton from "../components/CustomButton";
-
 import React from 'react';
 import {
   View,
@@ -18,41 +15,39 @@ import {
   Image,
   SafeAreaView,
   // StatusBar,
-} from 'react-native';
+} from "react-native";
 import { Images } from "../constants/Images";
+import { FONTS, Colors } from "../constants/Theme";
 
+
+const { width, height } = Dimensions.get("window");
 export default function IntroScreen1() {
   const handleSkip = () => {
     // Handle skip action
-    console.log('Skip pressed');
+    console.log("Skip pressed");
   };
 
   const handleNext = () => {
     // Handle next action
-    console.log('Next pressed');
+    console.log("Next pressed");
   };
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* <StatusBar barStyle={'dark-content'} backgroundColor={"blue"}/> */}
-      <View style={styles.imageContainer}>
-        {/* Replace this View with your actual image */}
-        <View style={styles.placeholderImage}>
-          <Image source={Images.avatar2} style={styles.img}/>
-        </View>
-      </View>
-      
+        <Image source={Images.woman} style={styles.img} />
+
       <View style={styles.gradientOverlay}>
         <View style={styles.contentContainer}>
           <View style={styles.textContainer}>
-            <Text style={styles.title}>
+                      <Text style={{ ...FONTS.h1, color: Colors.white}}>
               Set Your Budget, Spend with Intention
             </Text>
             <Text style={styles.subtitle}>
-              Create custom budgets for what matters most and track every naira with ease.
+              Create custom budgets for what matters most and track every naira
+              with ease.
             </Text>
           </View>
-          
+
           <View style={styles.buttonContainer}>
             <TouchableOpacity
               style={styles.skipButton}
@@ -61,40 +56,41 @@ export default function IntroScreen1() {
             >
               <Text style={styles.skipButtonText}>Skip</Text>
             </TouchableOpacity>
-            
-                      <View style={{width:'40%'}}>
-                          <CustomButton title='Next' onPress={ handleNext} />
+
+            <View style={{ width: "40%" }}>
+              <CustomButton title="Next" onPress={handleNext} />
             </View>
           </View>
         </View>
       </View>
     </SafeAreaView>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
-    alignItems: "center",
-    backgroundColor: '#f5f5f5',
-  },
-  imageContainer: {
     flex: 1,
-   
+    alignItems: "center",
+    backgroundColor: "#f5f5f5",
   },
   img: {
-    width: '100%',
-    height:'80%',
-
+    width: "100%",
+    height: "50%",
   },
   gradientOverlay: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 0,
     left: 0,
     right: 0,
+<<<<<<< HEAD
     height: 0.4,
     justifyContent: 'flex-end',
     backgroundColor: 'rgba(45, 67, 121, 0.95)',
+=======
+    height: height * 0.6,
+    justifyContent: "flex-end",
+    backgroundColor: "rgba(45, 67, 121, 0.95)",
+>>>>>>> c3dc4564d0dcf251ff029a0a1fa5756ec4df64ce
   },
   contentContainer: {
     paddingHorizontal: 24,
@@ -103,24 +99,16 @@ const styles = StyleSheet.create({
   textContainer: {
     marginBottom: 40,
   },
-  title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: '#ffffff',
-    textAlign: 'center',
-    marginBottom: 16,
-    lineHeight: 34,
-  },
   subtitle: {
     fontSize: 16,
-    color: '#ffffff',
-    textAlign: 'center',
+    color: "#ffffff",
+    textAlign: "center",
     lineHeight: 24,
     opacity: 0.9,
   },
   buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     gap: 16,
   },
   skipButton: {
@@ -129,26 +117,26 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     borderRadius: 25,
     borderWidth: 1,
-    borderColor: 'rgba(255, 255, 255, 0.3)',
-    backgroundColor: 'transparent',
-    alignItems: 'center',
+    borderColor: "rgba(255, 255, 255, 0.3)",
+    backgroundColor: "transparent",
+    alignItems: "center",
   },
   skipButtonText: {
-    color: '#ffffff',
+    color: "#ffffff",
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   nextButton: {
     flex: 1,
     paddingVertical: 16,
     paddingHorizontal: 24,
     borderRadius: 25,
-    backgroundColor: '#4CAF50',
-    alignItems: 'center',
+    backgroundColor: "#4CAF50",
+    alignItems: "center",
   },
   nextButtonText: {
-    color: '#ffffff',
+    color: "#ffffff",
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
 });
