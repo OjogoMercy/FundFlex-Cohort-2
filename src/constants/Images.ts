@@ -20,4 +20,6 @@ export const Images = {
   upgrade: require("../assets/images/upgrade.jpg"),
   banner: require("../assets/images/banner.jpg"),
   woman: require("../assets/images/woman.png"),
+  man: require("../assets/images/man.png"),
+  FundFlex: require("../assets/images/FundFlex.png"),
 };

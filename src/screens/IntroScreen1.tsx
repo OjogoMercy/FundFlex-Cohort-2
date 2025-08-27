@@ -1,8 +1,8 @@
 import { StatusBar } from "expo-status-bar";
-import CustomHeader from "./src/components/CustomHeader";
-import CustomInput from "./src/components/CustomInput";
+import CustomHeader from "../components/CustomHeader";
+import CustomInput from "../components/CustomInput";
 import { useState } from "react";
-import RootNavigator from "./src/navigation/RootNavigator";
+import RootNavigator from "../navigation/RootNavigator";
 import CustomButton from "../components/CustomButton";
 import React from "react";
 import {
@@ -18,47 +18,58 @@ import {
 } from "react-native";
 import { Images } from "../constants/Images";
 import { FONTS, Colors } from "../constants/Theme";
+import { useNavigation } from "expo-router";
 
-
-const { width, height } = Dimensions.get("window");
 export default function IntroScreen1() {
+  const navigation = useNavigation()
   const handleSkip = () => {
     // Handle skip action
     console.log("Skip pressed");
   };
 
   const handleNext = () => {
-    // Handle next action
+ 
     console.log("Next pressed");
   };
 
   return (
     <SafeAreaView style={styles.container}>
-        <Image source={Images.woman} style={styles.img} />
+      <Image source={Images.man} style={styles.img} />
 
       <View style={styles.gradientOverlay}>
         <View style={styles.contentContainer}>
           <View style={styles.textContainer}>
-                      <Text style={{ ...FONTS.h1, color: Colors.white}}>
-              Set Your Budget, Spend with Intention
+            <Text
+              style={{
+                ...FONTS.h1,
+                color: Colors.white,
+                textAlign: "center",
+                marginBottom: 10,
+              }}
+            >
+              Welcome To FundFlex
             </Text>
             <Text style={styles.subtitle}>
-              Create custom budgets for what matters most and track every naira
-              with ease.
+              Your All In One App to Budget smarter, Send And Receive Money, and
+              pay bills with ease - All From One Place.
             </Text>
           </View>
 
           <View style={styles.buttonContainer}>
-            <TouchableOpacity
-              style={styles.skipButton}
-              onPress={handleSkip}
-              activeOpacity={0.7}
-            >
-              <Text style={styles.skipButtonText}>Skip</Text>
-            </TouchableOpacity>
+            <View style={{ width: "40%" }}>
+              <CustomButton
+                title="Skip"
+                buttonStyle={{
+                  backgroundColor: "transparent",
+                  borderWidth: 1,
+                  borderColor: "#fff",
+                }}
+
+              />
+            </View>
 
             <View style={{ width: "40%" }}>
-              <CustomButton title="Next" onPress={handleNext} />
+              <CustomButton title="Next" onPress={() => navigation.navigate('IntroScreen2')} />
             </View>
           </View>
         </View>
@@ -82,7 +93,8 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    height: height * 0.6,
+    height: "60%",
+    // paddingTop: 20,
     justifyContent: "flex-end",
     backgroundColor: "rgba(45, 67, 121, 0.95)",
   },
@@ -116,9 +128,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   skipButtonText: {
+    ...FONTS.body4,
     color: "#ffffff",
-    fontSize: 16,
-    fontWeight: "600",
   },
   nextButton: {
     flex: 1,
@@ -129,8 +140,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   nextButtonText: {
-    color: "#ffffff",
-    fontSize: 16,
-    fontWeight: "600",
+    ...FONTS.h1,
   },
 });
