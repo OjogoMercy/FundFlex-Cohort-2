@@ -9,7 +9,7 @@ const Splash = () => {
     <View style={{flex:1,justifyContent:'center'}}>
           <Text>Splash</Text>
           <CustomButton title='Go to Login' onPress={() => navigation.navigate('IntroScreen1')}/>
-    </View>
+</View>
   )
 }
 
