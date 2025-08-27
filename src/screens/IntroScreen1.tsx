@@ -1,10 +1,10 @@
 import { StatusBar } from "expo-status-bar";
-import CustomHeader from "./src/components/CustomHeader";
-import CustomInput from "./src/components/CustomInput";
+import CustomHeader from "../components/CustomHeader";
+import CustomInput from "../components/CustomInput";
 import { useState } from "react";
-import RootNavigator from "./src/navigation/RootNavigator";
+import RootNavigator from "../navigation/RootNavigator";
 import CustomButton from "../components/CustomButton";
-import React from 'react';
+import React from "react";
 import {
   View,
   Text,
@@ -19,8 +19,6 @@ import {
 import { Images } from "../constants/Images";
 import { FONTS, Colors } from "../constants/Theme";
 
-
-const { width, height } = Dimensions.get("window");
 export default function IntroScreen1() {
   const handleSkip = () => {
     // Handle skip action
@@ -34,12 +32,12 @@ export default function IntroScreen1() {
 
   return (
     <SafeAreaView style={styles.container}>
-        <Image source={Images.woman} style={styles.img} />
+      <Image source={Images.woman} style={styles.img} />
 
       <View style={styles.gradientOverlay}>
         <View style={styles.contentContainer}>
           <View style={styles.textContainer}>
-                      <Text style={{ ...FONTS.h1, color: Colors.white}}>
+            <Text style={{ ...FONTS.h1, color: Colors.white }}>
               Set Your Budget, Spend with Intention
             </Text>
             <Text style={styles.subtitle}>
@@ -82,15 +80,10 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-<<<<<<< HEAD
-    height: 0.4,
-    justifyContent: 'flex-end',
-    backgroundColor: 'rgba(45, 67, 121, 0.95)',
-=======
-    height: height * 0.6,
+    height: "60%",
+    // paddingTop: 20,
     justifyContent: "flex-end",
     backgroundColor: "rgba(45, 67, 121, 0.95)",
->>>>>>> c3dc4564d0dcf251ff029a0a1fa5756ec4df64ce
   },
   contentContainer: {
     paddingHorizontal: 24,
