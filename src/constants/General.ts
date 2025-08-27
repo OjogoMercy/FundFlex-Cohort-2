@@ -71,9 +71,9 @@ const general = StyleSheet.create({
     alignItems: "center",
     borderWidth: 1,
     borderColor: Colors.black,
-    borderRadius: SCREEN_WIDTH * 0.02,
+    borderRadius: SCREEN_WIDTH * 0.01,
     paddingHorizontal: SCREEN_WIDTH * 0.03,
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.lightGray,
   },
   profile: {
     width: SCREEN_WIDTH * 0.11,
