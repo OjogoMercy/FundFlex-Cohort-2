@@ -34,8 +34,11 @@ const SignUp = () => {
       </ScrollView>
 
        <View>
-        <CustomButton title='Sign Up' buttonStyle={{width:'80%',alignSelf:'center',marginTop:20}} onPress={() => navigation.navigate('Login')}/>
-        <Text style={{alignSelf:'center'}}>Don't have an aaccount? Sign up</Text>
+        <CustomButton title='Sign Up' buttonStyle={{width:'80%',alignSelf:'center'}} onPress={() => navigation.navigate('VerifyCode')}/>
+        <View style={{flexDirection:'row',alignSelf:'center',marginBottom:30}}>
+          <Text>Already have an aaccount?</Text>
+          <Text style={{color:'green'}} onPress={() => navigation.navigate('Login')}>Log In</Text>
+        </View>
       </View>
 
     </View>

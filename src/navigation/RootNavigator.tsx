@@ -13,6 +13,9 @@ import Profile from "../screens/Profile";
 import Splash from "../screens/Splash";
 import IntroScreen2 from "../screens/IntroScreen2";
 import IntroScreen1 from "../screens/IntroScreen1";
+import VerifyCode from '../screens/VerifyCode1';
+import ResetPassword from "../screens/ResetPassword1";
+import ResetPassword2 from "../screens/Resetpassword2";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -32,6 +35,9 @@ export default function RootNavigator() {
             <Stack.Screen name="Splash" component={Splash} />
             <Stack.Screen name="IntroScreen1" component={IntroScreen1} />
             <Stack.Screen name="IntroScreen2" component={IntroScreen2} />
+            <Stack.Screen name="VerifyCode" component={VerifyCode} />
+            <Stack.Screen name="ResetPassword" component={ResetPassword} />
+            <Stack.Screen name="ResetPassword2" component={ResetPassword2} />
           </Stack.Navigator>
         </NavigationContainer>
       </NavigationIndependentTree>

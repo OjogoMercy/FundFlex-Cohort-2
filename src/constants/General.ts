@@ -13,8 +13,8 @@ const general = StyleSheet.create({
   },
   title: {
     fontSize: SCREEN_WIDTH * 0.06,
-    color: Colors.gray,
-    marginBottom: SCREEN_HEIGHT * 0.02,
+    color: Colors.black,
+    marginBottom: SCREEN_HEIGHT * 0.03,
   },
   text: {
     ...FONTS.h1,
@@ -31,6 +31,7 @@ const general = StyleSheet.create({
   buttonText: {
     color: Colors.white,
     fontWeight: "bold",
+    fontSize:20
   },
   input: {
     borderRadius: SCREEN_WIDTH * 0.02,
