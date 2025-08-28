@@ -24,7 +24,7 @@ const Login = () => {
 
       <View>
         <CustomButton title='Login' buttonStyle={{width:'80%',alignSelf:'center',marginTop:30}} onPress={() => navigation.navigate('HomeScreen')}/>
-       <View style={{flexDirection:'row',alignSelf:'center'}}>
+       <View style={{flexDirection:'row',alignSelf:'center',marginTop:10}}>
         <Text>Don't have an aaccount?</Text>
        <Text  style ={{color:'green'}} onPress={() => navigation.navigate('SignUp')}>Sign Up</Text></View>
       </View>

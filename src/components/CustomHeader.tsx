@@ -1,12 +1,11 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import AntDesign from '@expo/vector-icons/AntDesign';
 import { Colors, FONTS, SCREEN_HEIGHT, SCREEN_WIDTH } from "../constants/Theme";
 import { StatusBar } from "react-native";
-// import { useNavigation } from 'expo-router';
+import { useNavigation } from 'expo-router';
 const CustomHeader = ({ title }) => {
-  // const navigation = useNavigation();
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -20,13 +19,13 @@ const CustomHeader = ({ title }) => {
     >
     <StatusBar backgroundColor="white" barStyle={'light-content'} />
 
-      {/* <TouchableOpacity onPress={() => navigation.goBack()}>
-        <MaterialIcons
-          name="arrow-circle-left"
+      <TouchableOpacity onPress={() => navigation.goBack()}>
+        <AntDesign
+          name="arrowleft"
           size={SCREEN_HEIGHT * 0.03}
-          color={Colors.primary}
+          color={Colors.white}
         />
-      </TouchableOpacity> */}
+      </TouchableOpacity> 
       <Text
         style={{
           ...FONTS.h2,

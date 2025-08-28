@@ -8,7 +8,7 @@ import general from "../constants/General";
 import { ThemeContext } from "@react-navigation/native";
 import { FONTS } from "../constants/Theme";
 
-const ResetPassword2 = () => {
+const ResetPassword2 = ({navigation}) => {
      const [input, setInput] = useState('')
      const [password, setPassword] = useState('')
     return(
@@ -22,7 +22,7 @@ const ResetPassword2 = () => {
        <CustomInput value={password} onChangeText={setPassword }/>
      </View>
 
-     <CustomButton title="Next"  buttonStyle={{width:'60%',alignSelf:'center',marginTop:20}} onPress={() => navigation.navigate('')}/>
+     <CustomButton title="Next"  buttonStyle={{width:'60%',alignSelf:'center',marginTop:20}} onPress={() => navigation.navigate('VerifyCode2')}/>
     </View>
     )};
     

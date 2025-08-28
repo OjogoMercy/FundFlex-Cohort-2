@@ -30,12 +30,12 @@ const SignUp = () => {
       <Text>Create Password</Text>
       <CustomInput value={create} onChangeText={setCreate } containerStyle={{marginBottom:30,}}/>
       <Text>Confirm Password</Text>
-      <CustomInput value={confirm} onChangeText={setConfirm } containerStyle={{marginBottom:30,}}/>
+      <CustomInput value={confirm} onChangeText={setConfirm }/>
       </ScrollView>
 
-       <View>
-        <CustomButton title='Sign Up' buttonStyle={{width:'80%',alignSelf:'center'}} onPress={() => navigation.navigate('VerifyCode')}/>
-        <View style={{flexDirection:'row',alignSelf:'center',marginBottom:30}}>
+       <View style={{marginBottom:10}}>
+        <CustomButton title='Sign Up' buttonStyle={{width:'80%',alignSelf:'center',marginBottom:5}} onPress={() => navigation.navigate('VerifyCode')}/>
+        <View style={{flexDirection:'row',alignSelf:'center'}}>
           <Text>Already have an aaccount?</Text>
           <Text style={{color:'green'}} onPress={() => navigation.navigate('Login')}>Log In</Text>
         </View>
