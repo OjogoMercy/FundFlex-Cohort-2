@@ -14,17 +14,19 @@ const CustomHeader = ({ title }) => {
         height: SCREEN_HEIGHT * 0.1,
         width: SCREEN_WIDTH * 1,
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "flex-start",
+        gap:130,
+        padding:10
       }}
     >
     <StatusBar backgroundColor="white" barStyle={'light-content'} />
 
-      <TouchableOpacity onPress={() => navigation.goBack()}>
-        <AntDesign
-          name="arrowleft"
-          size={SCREEN_HEIGHT * 0.03}
-          color={Colors.white}
-        />
+      // <TouchableOpacity onPress={() => navigation.goBack()}>
+      //   <AntDesign
+      //     name="arrowleft"
+      //     size={SCREEN_HEIGHT * 0.03}
+      //     color={Colors.white}
+      //   />
       </TouchableOpacity> 
       <Text
         style={{

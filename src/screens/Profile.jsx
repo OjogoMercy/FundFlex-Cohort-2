@@ -18,13 +18,14 @@ const Profile = ({navigation}) => {
        <Text style={FONTS.body2a}>David</Text>
     </View>
 
+    
      <FlatList 
      data={itemBar}
      renderItem={({item,}) =>{
       return(
         <View style={{
           width:390,
-          height:45,
+          height:40,
           justifyContent:'space-between',
           padding:10,
           marginBottom:20,
@@ -41,7 +42,7 @@ const Profile = ({navigation}) => {
         </View>
       )
      }} />
-     <CustomButton title='Update' buttonStyle={{width:'70%',alignSelf:'center',height:50,marginBottom:50}} onPress={() => navigation.navigate('Login')}/>
+      <CustomButton title='Update' buttonStyle={{width:'70%',alignSelf:'center',height:55,marginBottom:50}} onPress={() => navigation.navigate('Settings1')}/>
     </View>
   )
 }
