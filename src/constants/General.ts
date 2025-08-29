@@ -65,6 +65,13 @@ const general = StyleSheet.create({
   icon: {
     marginRight: SCREEN_WIDTH * 0.02,
   },
+  icons: {
+    marginRight: SCREEN_WIDTH * 0.02,
+    shadowColor:'black',
+    shadowOffset: { width:10, height:5},
+    shadowOpacity: 0.3,
+    shadowRadius: 5
+  },
   inputWrapper: {
     flexDirection: "row",
     alignItems: "center",

@@ -115,8 +115,9 @@ export const FONTS = {
   },
   body1a: {
     fontFamily: "Montserrat-Regular",
-    fontSize: Sizes.body1 * 0.9,
-    lineHeight: 30,
+    fontSize: Sizes.body1 * 0.8,
+    lineHeight:30,
+    
   },
   body2: {
     fontFamily: "Montserrat-Regular",

@@ -2,7 +2,7 @@ import { StyleSheet, Text, View ,ScrollView} from 'react-native'
 import { useState } from 'react'
 import React from 'react'
 import general from '../constants/General'
-import CustomHeader from '../components/CustomHeader'
+import CustomHead from '../components/CustomHead'
 import CustomInput from '../components/CustomInput'
 import { useNavigation } from '@react-navigation/native'
 import CustomButton from '../components/CustomButton'
@@ -18,7 +18,7 @@ const SignUp = () => {
 
   return (
     <View style={general.container} >
-      <CustomHeader title={'Sign Up'} />
+      <CustomHead title={'Sign Up'} />
       
       <ScrollView style={{padding:10,marginTop:25}}>
       <Text>Phone/Email Address</Text>

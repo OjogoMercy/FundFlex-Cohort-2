@@ -1,21 +1,20 @@
 import React from "react";
 import { useState } from "react";
 import {View,Text,StyleSheet} from 'react-native';
-import CustomHeader from "../components/CustomHeader";
+import CustomHead from "../components/CustomHead";
 import CustomInput from "../components/CustomInput";
 import CustomButton from "../components/CustomButton";
 import general from "../constants/General";
-import { ThemeContext } from "@react-navigation/native";
 import { FONTS } from "../constants/Theme";
 
 const ResetPassword = ({navigation}) => {
      const [input, setInput] = useState('')
     return(
     <View style={general.container}>
-     <CustomHeader title={'Reset Password'}/>
+     <CustomHead title={'Reset Password'}/>
 
      <View style={{marginVertical:80,marginHorizontal:20}}>
-      <Text style={FONTS.body3}>Create Password</Text>
+      <Text style={FONTS.body3}>Enter your phone number</Text>
       <CustomInput value={input} onChangeText={setInput } containerStyle={{width:'100%'}}/>
      </View>
 

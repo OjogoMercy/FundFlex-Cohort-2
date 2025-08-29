@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import {View,Text,StyleSheet} from 'react-native';
-import CustomHeader from "../components/CustomHeader";
+import CustomHead from "../components/CustomHead";
 import CustomInput from "../components/CustomInput";
 import CustomButton from "../components/CustomButton";
 import general from "../constants/General";
@@ -13,7 +13,7 @@ const ResetPassword2 = ({navigation}) => {
      const [password, setPassword] = useState('')
     return(
     <View style={general.container}>
-     <CustomHeader title={'Reset Password'}/>
+     <CustomHead title={'Reset Password'}/>
 
      <View style={{marginVertical:20,padding:10}}>
       <Text style={FONTS.body3}>Create password</Text>
@@ -22,7 +22,7 @@ const ResetPassword2 = ({navigation}) => {
        <CustomInput value={password} onChangeText={setPassword }/>
      </View>
 
-     <CustomButton title="Next"  buttonStyle={{width:'60%',alignSelf:'center',marginTop:20}} onPress={() => navigation.navigate('VerifyCode2')}/>
+     <CustomButton title="Next"  buttonStyle={{width:'60%',alignSelf:'center',marginTop:20}} onPress={() => navigation.navigate("ResetPassword3")}/>
     </View>
     )};
     

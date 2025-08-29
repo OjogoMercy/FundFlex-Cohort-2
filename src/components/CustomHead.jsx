@@ -4,7 +4,8 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import { Colors, FONTS, SCREEN_HEIGHT, SCREEN_WIDTH } from "../constants/Theme";
 import { StatusBar } from "react-native";
 import { useNavigation } from 'expo-router';
-const CustomHeader = ({ title }) => {
+
+const CustomHead = ({ title }) => {
   const navigation = useNavigation();
   return (
     <View
@@ -14,20 +15,12 @@ const CustomHeader = ({ title }) => {
         height: SCREEN_HEIGHT * 0.1,
         width: SCREEN_WIDTH * 1,
         alignItems: "center",
-        justifyContent: "flex-start",
-        gap:130,
+        justifyContent: "center",
         padding:10
       }}
     >
     <StatusBar backgroundColor="white" barStyle={'light-content'} />
 
-      <TouchableOpacity onPress={() => navigation.goBack()}>
-        <AntDesign
-          name="arrowleft"
-          size={SCREEN_HEIGHT * 0.03}
-          color={Colors.white}
-        />
-      </TouchableOpacity> 
       <Text
         style={{
           ...FONTS.h2,
@@ -41,6 +34,6 @@ const CustomHeader = ({ title }) => {
   );
 };
 
-export default CustomHeader;
+export default CustomHead;
 
 const styles = StyleSheet.create({});

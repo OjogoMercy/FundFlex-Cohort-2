@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import CustomInput from '../components/CustomInput'
 import CustomButton from '../components/CustomButton'
-import CustomHeader from '../components/CustomHeader'
+import CustomHead from '../components/CustomHead'
 import { useNavigation } from '@react-navigation/native'
 
 const Login = () => {
@@ -13,17 +13,17 @@ const Login = () => {
   return (
     <View style={styles.container}>
 
-    <CustomHeader title={'Login'}/>
+    <CustomHead title={'Login'}/>
      <View style={styles.form}>
         <Text>Phone/Email Address</Text>
          <CustomInput value={input} onChangeText={setInput } containerStyle={{marginBottom:50,}} />
          <Text>Password</Text>
          <CustomInput value={Password} onChangeText={setPassword } secure={true}/>
-         <View style={{alignItems:'flex-end'}}><Text>Forgotten Password</Text></View>
+         <View style={{alignItems:'flex-end'}}><Text onPress={() => navigation.navigate("ResetPassword")}>Forgotten Password</Text></View>
      </View>
 
       <View>
-        <CustomButton title='Login' buttonStyle={{width:'80%',alignSelf:'center',marginTop:30}} onPress={() => navigation.navigate('HomeScreen')}/>
+        <CustomButton title='Login' buttonStyle={{width:'80%',alignSelf:'center',marginTop:30}} onPress={() => navigation.navigate("Profile")}/>
        <View style={{flexDirection:'row',alignSelf:'center',marginTop:10}}>
         <Text>Don't have an aaccount?</Text>
        <Text  style ={{color:'green'}} onPress={() => navigation.navigate('SignUp')}>Sign Up</Text></View>
