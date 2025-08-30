@@ -16,7 +16,13 @@ import IntroScreen1 from "../screens/IntroScreen1";
 import VerifyCode from '../screens/VerifyCode1';
 import ResetPassword from "../screens/ResetPassword1";
 import ResetPassword2 from "../screens/Resetpassword2";
+<<<<<<< Updated upstream
 import VerifyCode2 from "../screens/VerifyCode2";
+=======
+import Settings1 from "../screens/Settings1";
+import Settings2 from "../screens/Settings2";
+import Payment from "../screens/Payment";
+>>>>>>> Stashed changes
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -39,7 +45,10 @@ export default function RootNavigator() {
             <Stack.Screen name="VerifyCode" component={VerifyCode} />
             <Stack.Screen name="ResetPassword" component={ResetPassword} />
             <Stack.Screen name="ResetPassword2" component={ResetPassword2} />
+<<<<<<< Updated upstream
             <Stack.Screen name="VerifyCode2" component={VerifyCode2} />
+=======
+>>>>>>> Stashed changes
             <Stack.Screen name="Profile" component={Profile} />
           </Stack.Navigator>
         </NavigationContainer>

@@ -22,7 +22,11 @@ const ResetPassword2 = ({navigation}) => {
        <CustomInput value={password} onChangeText={setPassword }/>
      </View>
 
+<<<<<<< Updated upstream
      <CustomButton title="Next"  buttonStyle={{width:'60%',alignSelf:'center',marginTop:20}} onPress={() => navigation.navigate('VerifyCode2')}/>
+=======
+     <CustomButton title="Next"  buttonStyle={{width:'60%',alignSelf:'center',marginTop:20}} onPress={() => navigation.navigate()}/>
+>>>>>>> Stashed changes
     </View>
     )};
     
