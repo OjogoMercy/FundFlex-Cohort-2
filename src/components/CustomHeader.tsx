@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import React from "react";
 import AntDesign from '@expo/vector-icons/AntDesign';
-import { Colors, FONTS, SCREEN_HEIGHT, SCREEN_WIDTH } from "../constants/Theme";
+import { Colors, FONTS, Sizes } from "../constants/Theme";
 import { StatusBar } from "react-native";
 import { useNavigation } from 'expo-router';
 const CustomHeader = ({ title }) => {
@@ -11,10 +11,12 @@ const CustomHeader = ({ title }) => {
       style={{
         flexDirection: "row",
         backgroundColor: Colors.primary,
-        height: SCREEN_HEIGHT * 0.1,
-        width: SCREEN_WIDTH * 1,
+        height: Sizes.height* 0.1,
+        width: Sizes.width * 1,
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "flex-start",
+        gap:150,
+        padding:5
       }}
     >
     <StatusBar backgroundColor="white" barStyle={'light-content'} />
@@ -22,7 +24,7 @@ const CustomHeader = ({ title }) => {
       <TouchableOpacity onPress={() => navigation.goBack()}>
         <AntDesign
           name="arrowleft"
-          size={SCREEN_HEIGHT * 0.03}
+          size={Sizes.height* 0.03}
           color={Colors.white}
         />
       </TouchableOpacity> 

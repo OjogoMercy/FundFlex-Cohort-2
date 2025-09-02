@@ -27,6 +27,7 @@ const general = StyleSheet.create({
     borderRadius: SCREEN_WIDTH * 0.03,
     alignItems: "center",
     marginTop: SCREEN_HEIGHT * 0.02,
+
   },
   buttonText: {
     color: Colors.white,
@@ -71,7 +72,7 @@ const general = StyleSheet.create({
     borderWidth: 1,
     borderColor: Colors.black,
     borderRadius: SCREEN_WIDTH * 0.01,
-    paddingHorizontal: SCREEN_WIDTH * 0.03,
+    paddingHorizontal: SCREEN_WIDTH * 0.01,
     backgroundColor: Colors.lightGray,
   },
   profile: {

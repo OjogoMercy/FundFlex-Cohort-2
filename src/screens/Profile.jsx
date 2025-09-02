@@ -41,7 +41,7 @@ const Profile = ({navigation}) => {
         </View>
       )
      }} />
-     <CustomButton title='Update' buttonStyle={{width:'70%',alignSelf:'center',height:50,marginBottom:50}} onPress={() => navigation.navigate('Login')}/>
+     <CustomButton title='Update' buttonStyle={{width:'70%',alignSelf:'center',height:55,marginBottom:50}} onPress={() => navigation.navigate('Login')}/>
     </View>
   )
 }
