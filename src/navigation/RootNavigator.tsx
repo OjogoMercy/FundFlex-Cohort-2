@@ -13,6 +13,12 @@ import Profile from "../screens/Profile";
 import Splash from "../screens/Splash";
 import IntroScreen1 from "../screens/IntroScreen1";
 import IntroScreen2 from "../screens/IntroScreen2";
+import ResetPin3 from "../screens/ResetPin3";
+import About from "../screens/About";
+import ResetPassword1 from "../screens/ResetPassword1";
+import PrivacyPolicy from "../screens/PrivacyPolicy";
+import Facial from "../screens/Facial";
+import Personal from "../screens/Personal";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -22,7 +28,7 @@ export default function RootNavigator() {
         
       <NavigationIndependentTree>
         <NavigationContainer>
-                <Stack.Navigator initialRouteName="Splash" screenOptions={{ headerShown: false }}>
+                <Stack.Navigator initialRouteName="Personal" screenOptions={{ headerShown: false }}>
                     
             <Stack.Screen
               name="BottomTab"
@@ -34,6 +40,12 @@ export default function RootNavigator() {
             <Stack.Screen name="Splash" component={Splash} />
             <Stack.Screen name="IntroScreen1" component={IntroScreen1} />
             <Stack.Screen name="IntroScreen2" component={IntroScreen2} />
+            <Stack.Screen name="ResetPin3" component={ResetPin3} />
+            <Stack.Screen name="About" component={About} />
+            <Stack.Screen name="ResetPassword1" component={ResetPassword1} />
+            <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
+            <Stack.Screen name="Facial" component={Facial} />
+            <Stack.Screen name="Personal" component={Personal} />
           </Stack.Navigator>
         </NavigationContainer>
       </NavigationIndependentTree>
@@ -46,6 +58,7 @@ export function BottomTab() {
       <Tab.Screen name="Wallet" component={Wallet} />
       <Tab.Screen name="Chart" component={Chart} />
       <Tab.Screen name="Settings" component={Settings} />
+      <Tab.Screen name="personal" component={personal} />
     </Tab.Navigator>
   );
 }

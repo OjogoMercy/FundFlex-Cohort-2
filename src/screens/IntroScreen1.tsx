@@ -59,6 +59,7 @@ export default function IntroScreen1() {
             <View style={{ width: "40%" }}>
               <CustomButton
                 title="Skip"
+                onPress={handleSkip}
                 buttonStyle={{
                   backgroundColor: "transparent",
                   borderWidth: 1,
