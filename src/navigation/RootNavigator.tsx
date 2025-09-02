@@ -11,8 +11,8 @@ import Settings from "../screens/Bottomtab/Settings";
 import Wallet from "../screens/Bottomtab/Wallet";
 import Profile from "../screens/Profile";
 import Splash from "../screens/Splash";
-import IntroScreen2 from "../screens/IntroScreen2";
 import IntroScreen1 from "../screens/IntroScreen1";
+import IntroScreen2 from "../screens/IntroScreen2";
 import VerifyCode from '../screens/VerifyCode1';
 import ResetPassword from "../screens/ResetPassword1";
 import ResetPassword2 from "../screens/Resetpassword2";
@@ -23,9 +23,12 @@ const Stack = createNativeStackNavigator();
 
 export default function RootNavigator() {
     return (
+        
       <NavigationIndependentTree>
         <NavigationContainer>
           <Stack.Navigator initialRouteName="Profile" screenOptions={{headerShown: false}}>
+                <Stack.Navigator initialRouteName="Splash" screenOptions={{ headerShown: false }}>
+                    
             <Stack.Screen
               name="BottomTab"
               component={BottomTab}

@@ -80,6 +80,8 @@ export const FONTS = {
     fontFamily: "Poppins-SemiBold",
     fontSize: Sizes.h1,
     lineHeight: screenHeight * 0.05,
+    fontWeight: 'Bold',
+
   },
   h2: {
     fontFamily: "Poppins-SemiBold",
