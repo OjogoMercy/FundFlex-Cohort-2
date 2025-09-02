@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet,  } from "react-native";
 import { Colors,Sizes,FONTS,SCREEN_HEIGHT,SCREEN_WIDTH } from "./Theme";
 
 const general = StyleSheet.create({
@@ -17,7 +17,7 @@ const general = StyleSheet.create({
     marginBottom: SCREEN_HEIGHT * 0.03,
   },
   text: {
-    ...FONTS.h1,
+    fontSize: SCREEN_WIDTH * 0.04,
     color: Colors.black,
   },
   button: {
