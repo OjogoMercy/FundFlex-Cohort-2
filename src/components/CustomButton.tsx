@@ -28,7 +28,7 @@ const CustomButton = ({
   textStyle
 }: Props) => {
   const dynamicStyle = {
-    backgroundColor: active ? Colors.green2 : Colors.sky,
+    backgroundColor: active ? Colors.primary: Colors.sky,
     opacity: disabled ? 0.5 : 1,
   };
 

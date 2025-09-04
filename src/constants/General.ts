@@ -21,9 +21,9 @@ const general = StyleSheet.create({
     color: Colors.black,
   },
   button: {
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.lightGray,
     paddingVertical: SCREEN_HEIGHT * 0.02,
-    paddingHorizontal: SCREEN_WIDTH * 0.05,
+    paddingHorizontal: Sizes.width * 0.05,
     borderRadius: SCREEN_WIDTH * 0.03,
     alignItems: "center",
     marginTop: SCREEN_HEIGHT * 0.02,
@@ -31,14 +31,15 @@ const general = StyleSheet.create({
   },
   buttonText: {
     color: Colors.white,
-    fontWeight: "bold",
-    fontSize:20
+    fontWeight:"bold",
+    fontSize:15
   },
   input: {
-    borderRadius: SCREEN_WIDTH * 0.02,
-    paddingHorizontal: SCREEN_WIDTH * 0.04,
-    paddingVertical: SCREEN_HEIGHT * 0.025,
+    borderRadius: SCREEN_WIDTH * 0.010,
+    paddingHorizontal: SCREEN_WIDTH * 0.03,
+    paddingVertical: SCREEN_HEIGHT * 0.015,
       fontSize: SCREEN_WIDTH * 0.04,
+      fontWeight:"400",
     flex:1
   },
   disabled: {
@@ -54,7 +55,7 @@ const general = StyleSheet.create({
     borderColor: Colors.lightGray,
     borderRadius: SCREEN_WIDTH * 0.02,
     paddingHorizontal: SCREEN_WIDTH * 0.04,
-    paddingVertical: SCREEN_HEIGHT * 0.015,
+    paddingVertical: SCREEN_HEIGHT * 0.025,
     fontSize: SCREEN_WIDTH * 0.04,
     color: Colors.black,
   },
@@ -69,10 +70,9 @@ const general = StyleSheet.create({
   inputWrapper: {
     flexDirection: "row",
     alignItems: "center",
-    borderWidth: 1,
     borderColor: Colors.black,
-    borderRadius: SCREEN_WIDTH * 0.01,
-    paddingHorizontal: SCREEN_WIDTH * 0.01,
+    borderRadius: SCREEN_WIDTH * 0.02,
+    paddingHorizontal: SCREEN_WIDTH * 0.00,
     backgroundColor: Colors.lightGray,
   },
   profile: {
