@@ -17,22 +17,23 @@ const general = StyleSheet.create({
     marginBottom: SCREEN_HEIGHT * 0.03,
   },
   text: {
-    ...FONTS.h1,
-    color: Colors.black,
+    ...FONTS.h2,
+    color: Colors.white,
   },
   button: {
-    backgroundColor: Colors.lightGray,
+    backgroundColor: Colors.green,
     paddingVertical: SCREEN_HEIGHT * 0.02,
-    paddingHorizontal: Sizes.width * 0.05,
-    borderRadius: SCREEN_WIDTH * 0.03,
+    paddingHorizontal: SCREEN_WIDTH * 0.03,
+    borderRadius: SCREEN_WIDTH * 0.07,
     alignItems: "center",
     marginTop: SCREEN_HEIGHT * 0.02,
 
   },
   buttonText: {
     color: Colors.white,
-    fontWeight:"bold",
-    fontSize:15
+    fontWeight:"light",
+    fontSize:13,
+    lineHeight:SCREEN_HEIGHT *0.02
   },
   input: {
     borderRadius: SCREEN_WIDTH * 0.010,
@@ -88,6 +89,17 @@ const general = StyleSheet.create({
           justifyContent: "space-between",
   },
 boldText:{ ...FONTS.h3, marginTop: SCREEN_HEIGHT * 0.02 },
+box:{
+  width:SCREEN_WIDTH *0.900,
+  height:SCREEN_HEIGHT*0.330,
+  borderRadius:Sizes.bigRadius,
+  backgroundColor:Colors.primary,
+  alignSelf:"center",
+  paddingHorizontal:10,
+  paddingVertical:10,
+  alignItems:"center",
+  marginTop:30
+}
 });
 
 export default general;

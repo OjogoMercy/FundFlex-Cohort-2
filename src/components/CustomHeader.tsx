@@ -30,7 +30,7 @@ const CustomHeader = ({ title }) => {
       </TouchableOpacity> 
       <Text
         style={{
-          ...FONTS.h1,
+          ...FONTS.h2,
           textAlign: "center",
           color: Colors.primary,
         }}

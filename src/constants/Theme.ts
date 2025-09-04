@@ -43,8 +43,8 @@ export const Sizes = {
 
   // font sizes
   navTitle: screenHeight * 0.04375,
-  h1: screenHeight * 0.0375,
-  h2: screenHeight * 0.0275,
+  h1: screenHeight * 0.0495,
+  h2: screenHeight * 0.0295,
   h2a: screenHeight * 0.034,
   h2c: screenHeight * 0.0245,
   h3: screenHeight * 0.0225,
@@ -81,22 +81,26 @@ export const FONTS = {
     fontSize: Sizes.h1,
     lineHeight: screenHeight * 0.05,
     fontWeight: 'Bold',
+    color:Colors.white
 
   },
   h2: {
     fontFamily: "Poppins-SemiBold",
     fontSize: Sizes.h2,
     lineHeight: screenHeight * 0.0375,
+    fontWeight:"500"
   },
   h3: {
     fontFamily: "Montserrat-Bold",
     fontSize: Sizes.h3,
     lineHeight: screenHeight * 0.025,
+    color:Colors.white
   },
   h4: {
     fontFamily: "Montserrat-Bold",
     fontSize: Sizes.h4,
-    lineHeight: screenHeight * 0.025,
+    lineHeight: screenHeight * 0.040,
+    color:Colors.white,
   },
   h5: {
     fontFamily: "Montserrat-Bold",

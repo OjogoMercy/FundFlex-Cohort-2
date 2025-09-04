@@ -8,6 +8,7 @@ import Chart from "../screens/Bottomtab/Chart";
 import Settings from "../screens/Bottomtab/Settings";
 import Wallet from "../screens/Bottomtab/Wallet";
 import Send from "../pages/Send";
+import Recieve from "../pages/Recieve";
 
 
 const Tab = createBottomTabNavigator();
@@ -18,7 +19,7 @@ export default function RootNavigator() {
         
       <NavigationIndependentTree>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="Send" screenOptions={{headerShown: false}}>
+          <Stack.Navigator initialRouteName="Recieve" screenOptions={{headerShown: false}}>
                     
             <Stack.Screen
               name="BottomTab"
@@ -26,6 +27,7 @@ export default function RootNavigator() {
               options={{ headerShown: false }}
             />
             <Stack.Screen name="Send" component={Send}/>
+            <Stack.Screen name="Recieve" component={Recieve} />
           </Stack.Navigator>
         </NavigationContainer>
       </NavigationIndependentTree>
