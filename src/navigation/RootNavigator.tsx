@@ -3,10 +3,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationIndependentTree } from "@react-navigation/native";
-import HomeScreen from "../screens/Bottomtab/HomeScreen";
-import Chart from "../screens/Bottomtab/Chart";
-import Settings from "../screens/Bottomtab/Settings";
-import Wallet from "../screens/Bottomtab/Wallet";
+import HomeScreen from "../Bottomtab/HomeScreen";
+import Chart from "../Bottomtab/Chart";
+import Settings from "../Bottomtab/Settings";
+import Wallet from "../Bottomtab/Wallet";
 import Send from "../pages/Send";
 import Recieve from "../pages/Recieve";
 
@@ -41,5 +41,5 @@ export function BottomTab() {
       <Tab.Screen name="Chart" component={Chart} />
       <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>
-  );
-}
+  )
+};
