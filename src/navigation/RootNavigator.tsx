@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -7,8 +7,9 @@ import HomeScreen from "../Bottomtab/HomeScreen";
 import Chart from "../Bottomtab/Chart";
 import Settings from "../Bottomtab/Settings";
 import Wallet from "../Bottomtab/Wallet";
-import Send from "../pages/Send";
 import Recieve from "../pages/Recieve";
+import Homepage from "../pages/Homepage";
+
 
 
 const Tab = createBottomTabNavigator();
@@ -19,15 +20,11 @@ export default function RootNavigator() {
         
       <NavigationIndependentTree>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="Recieve" screenOptions={{headerShown: false}}>
+          <Stack.Navigator initialRouteName= "Recieve" screenOptions={{headerShown: false}}>
                     
-            <Stack.Screen
-              name="BottomTab"
-              component={BottomTab}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen name="Send" component={Send}/>
+          
             <Stack.Screen name="Recieve" component={Recieve} />
+            <Stack.Screen name="Homepage" Component={Homepage} />
           </Stack.Navigator>
         </NavigationContainer>
       </NavigationIndependentTree>
@@ -42,4 +39,4 @@ export function BottomTab() {
       <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>
   )
-};
+}; 

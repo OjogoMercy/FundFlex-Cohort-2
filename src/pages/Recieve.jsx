@@ -1,9 +1,9 @@
 import { View, StyleSheet, Text, Image } from "react-native";
-import CustomHeader from "../components/CustomHeader";
-import CustomButton from "../components/CustomButton";
+import CustomHeader from "../../components/CustomHeader";
+import CustomButton from "../../components/CustomButton";
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
-import general from "../constants/General";
-import { FONTS, Sizes, } from "../constants/Theme"
+import general from "../../constants/General";
+import { FONTS, Sizes, } from "../../constants/Theme"
 
 const Recieve = ({ navigation }) => {
     return (

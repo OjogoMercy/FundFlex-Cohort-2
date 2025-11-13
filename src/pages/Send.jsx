@@ -1,10 +1,10 @@
 import { View, StyleSheet, Text, Image } from "react-native";
 import AntDesign from '@expo/vector-icons/AntDesign';
-import CustomHeader from "../components/CustomHeader";
-import CustomButton from "../components/CustomButton";
-import CustomInput from "../components/CustomInput";
-import general from "../constants/General";
-import { FONTS } from "../constants/Theme";
+import CustomHeader from "../../components/CustomHeader";
+import CustomButton from "../../components/CustomButton";
+import CustomInput from "../../components/CustomInput";
+import general from "../../constants/General";
+import { FONTS } from "../../constants/Theme";
 
 const Send = () => {
     return (
