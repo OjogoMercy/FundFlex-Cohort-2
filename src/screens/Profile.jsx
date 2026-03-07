@@ -42,7 +42,11 @@ const Profile = ({navigation}) => {
         </View>
       )
      }} />
+<<<<<<< HEAD
       <CustomButton title='Update' buttonStyle={{width:'70%',alignSelf:'center',height:55,marginBottom:50}} onPress={() => navigation.navigate('Settings1')}/>
+=======
+     <CustomButton title='Update' buttonStyle={{width:'70%',alignSelf:'center',height:55,marginBottom:50}} onPress={() => navigation.navigate('Login')}/>
+>>>>>>> 5183f778aced0bf64cadb77eee89043c980b21f3
     </View>
   )
 }
