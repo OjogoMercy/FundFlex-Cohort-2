@@ -25,7 +25,8 @@ export const Colors = {
   grey3: "#efefef",
   gray4: "#B4B5B5",
   red: "red",
-  lightGray:"#ccc"
+  lightGray:"#ccc",
+  fund:'#0A2342'
 };
 
 export const Sizes = {
