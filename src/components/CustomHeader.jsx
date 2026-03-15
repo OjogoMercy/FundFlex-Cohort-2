@@ -10,29 +10,29 @@ const CustomHeader = ({ title }) => {
     <View
       style={{
         flexDirection: "row",
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.primary,
         height: Sizes.height* 0.1,
         width: Sizes.width * 1,
         alignItems: "center",
         justifyContent: "flex-start",
-        gap:100,
-        padding:15
+        gap:150,
+        padding:5
       }}
     >
     <StatusBar backgroundColor="white" barStyle={'light-content'} />
 
-    <TouchableOpacity onPress={() => navigation.goBack()}>
+      <TouchableOpacity onPress={() => navigation.goBack()}>
         <AntDesign
           name="arrowleft"
           size={Sizes.height* 0.03}
-          color={Colors.primary}
+          color={Colors.white}
         />
       </TouchableOpacity> 
       <Text
         style={{
           ...FONTS.h2,
           textAlign: "center",
-          color: Colors.primary,
+          color: Colors.white,
         }}
       >
         {title}

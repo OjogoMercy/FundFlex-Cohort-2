@@ -13,7 +13,9 @@ const Login = () => {
   return (
     <View style={styles.container}>
 
-<<<<<<< HEAD
+
+      <CustomHeader title={'Login'} />
+      <View style={styles.form}>
     <CustomHead title={'Login'}/>
      <View style={styles.form}>
         <Text>Phone/Email Address</Text>
@@ -24,27 +26,16 @@ const Login = () => {
      </View>
 
       <View>
-        <CustomButton title='Login' buttonStyle={{width:'80%',alignSelf:'center',marginTop:30}} onPress={() => navigation.navigate("Profile")}/>
-       <View style={{flexDirection:'row',alignSelf:'center',marginTop:10}}>
-        <Text>Don't have an aaccount?</Text>
-       <Text  style ={{color:'green'}} onPress={() => navigation.navigate('SignUp')}>Sign Up</Text></View>
-=======
-      <CustomHeader title={'Login'} />
-      <View style={styles.form}>
-        <Text>Phone/Email Address</Text>
-        <CustomInput value={input} onChangeText={setInput} containerStyle={{ marginBottom: 50, }} />
-        <Text>Password</Text>
-        <CustomInput value={Password} onChangeText={setPassword} secure={true} />
-        <View style={{ alignItems: 'flex-end' }}><Text>Forgotten Password</Text></View>
-      </View>
-
-      <View>
         <CustomButton title='Login' buttonStyle={{ width: '80%', alignSelf: 'center', marginTop: 30 }} onPress={() => navigation.navigate('HomeScreen')} />
         <View style={{ flexDirection: 'row', alignSelf: 'center', marginTop: 20 }}>
           <Text>Don't have an aaccount?</Text>
           <Text style={{ color: 'green' }} onPress={() => navigation.navigate('SignUp')}>Sign Up</Text></View>
->>>>>>> 5183f778aced0bf64cadb77eee89043c980b21f3
+        <CustomButton title='Login' buttonStyle={{width:'80%',alignSelf:'center',marginTop:30}} onPress={() => navigation.navigate("Alert")}/>
+       <View style={{flexDirection:'row',alignSelf:'center',marginTop:10}}>
+        <Text>Don't have an aaccount?</Text>
+       <Text  style ={{color:'green'}} onPress={() => navigation.navigate('SignUp')}>Sign Up</Text></View>
       </View>
+    </View>
     </View>
   )
 }

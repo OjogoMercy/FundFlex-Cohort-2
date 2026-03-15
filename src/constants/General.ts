@@ -17,28 +17,30 @@ const general = StyleSheet.create({
     marginBottom: SCREEN_HEIGHT * 0.03,
   },
   text: {
-    fontSize: SCREEN_WIDTH * 0.04,
-    color: Colors.black,
+    ...FONTS.h2,
+    color: Colors.white,
   },
   button: {
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.green,
     paddingVertical: SCREEN_HEIGHT * 0.02,
-    paddingHorizontal: SCREEN_WIDTH * 0.05,
-    borderRadius: SCREEN_WIDTH * 0.03,
+    paddingHorizontal: SCREEN_WIDTH * 0.03,
+    borderRadius: SCREEN_WIDTH * 0.07,
     alignItems: "center",
     marginTop: SCREEN_HEIGHT * 0.02,
 
   },
   buttonText: {
     color: Colors.white,
-    fontWeight: "bold",
-    fontSize:20
+    fontWeight:"light",
+    fontSize:13,
+    lineHeight:SCREEN_HEIGHT *0.02
   },
   input: {
-    borderRadius: SCREEN_WIDTH * 0.02,
-    paddingHorizontal: SCREEN_WIDTH * 0.04,
-    paddingVertical: SCREEN_HEIGHT * 0.025,
+    borderRadius: SCREEN_WIDTH * 0.010,
+    paddingHorizontal: SCREEN_WIDTH * 0.03,
+    paddingVertical: SCREEN_HEIGHT * 0.015,
       fontSize: SCREEN_WIDTH * 0.04,
+      fontWeight:"400",
     flex:1
   },
   disabled: {
@@ -54,7 +56,7 @@ const general = StyleSheet.create({
     borderColor: Colors.lightGray,
     borderRadius: SCREEN_WIDTH * 0.02,
     paddingHorizontal: SCREEN_WIDTH * 0.04,
-    paddingVertical: SCREEN_HEIGHT * 0.015,
+    paddingVertical: SCREEN_HEIGHT * 0.025,
     fontSize: SCREEN_WIDTH * 0.04,
     color: Colors.black,
   },
@@ -76,10 +78,9 @@ const general = StyleSheet.create({
   inputWrapper: {
     flexDirection: "row",
     alignItems: "center",
-    borderWidth: 1,
     borderColor: Colors.black,
-    borderRadius: SCREEN_WIDTH * 0.01,
-    paddingHorizontal: SCREEN_WIDTH * 0.01,
+    borderRadius: SCREEN_WIDTH * 0.02,
+    paddingHorizontal: SCREEN_WIDTH * 0.00,
     backgroundColor: Colors.lightGray,
   },
   profile: {
@@ -95,6 +96,17 @@ const general = StyleSheet.create({
           justifyContent: "space-between",
   },
 boldText:{ ...FONTS.h3, marginTop: SCREEN_HEIGHT * 0.02 },
+box:{
+  width:SCREEN_WIDTH *0.900,
+  height:SCREEN_HEIGHT*0.330,
+  borderRadius:Sizes.bigRadius,
+  backgroundColor:Colors.primary,
+  alignSelf:"center",
+  paddingHorizontal:10,
+  paddingVertical:10,
+  alignItems:"center",
+  marginTop:30
+}
 });
 
 export default general;
